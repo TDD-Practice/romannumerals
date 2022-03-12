@@ -58,10 +58,10 @@ fromroman_table = [
     ('XXV', 25)
 ]
 
-@pytest.mark.parametrize('number, roman', toroman_table)
-def test_toroman(number, roman):
-    assert toroman(number) == roman
-
 @pytest.mark.parametrize('roman, number', fromroman_table)
 def test_fromroman(roman, number):
     assert fromroman(roman) == number
+
+@pytest.mark.parametrize('number, roman', toroman_table)
+def test_toroman(number, roman):
+    assert toroman(number) == roman
