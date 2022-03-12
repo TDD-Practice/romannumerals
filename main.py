@@ -27,16 +27,17 @@ def fromroman(roman):
             if roman[i:i+1] == "I":
                 number += 1
                 i+=1
-        if roman[i:i+1] == "V":
+        elif roman[i:i+1] == "V":
             number += 5
             i+=1
             if roman[i:i+1] == "I":
                 number -= 1
                 i+=1
-        if roman[i:i+1] == "X":
+        elif roman[i:i+1] == "X":
             number += 10
             i+=1
             if roman[i:i+1] == "I":
                 number -= 1
                 i+=1
+        else: raise ValueError("Invalid Roman number")
     return number

@@ -27,7 +27,15 @@ toroman_table = [
     (22, 'XXII'),
     (23, 'XXIII'),
     (24, 'XXIV'),
-    (25, 'XXV')
+    (25, 'XXV'),
+    (51, 'LI'),
+    (55, 'LV'),
+    (56, 'LVI'),
+    (59, 'LIX'),
+    (91, 'XCI'),
+    (95, 'XCV'),
+    (96, 'XCVI'),
+    (99, 'XCIX')
 ]
 
 fromroman_table = [
@@ -55,7 +63,15 @@ fromroman_table = [
     ('XXII', 22),
     ('XXIII', 23),
     ('XXIV', 24),
-    ('XXV', 25)
+    ('XXV', 25),
+    ('LI', 51),
+    ('LV', 55),
+    ('LVI', 56),
+    ('LIX', 59),
+    ('XCI', 91),
+    ('XCV', 95),
+    ('XCVI', 96),
+    ('XCIX', 99)
 ]
 
 @pytest.mark.parametrize('roman, number', fromroman_table)
