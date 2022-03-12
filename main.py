@@ -19,6 +19,26 @@ def toroman(number):
         return 'IX'
     if number == 10:
         return 'X'
+    if number == 11:
+        return 'XI'
+    if number == 12:
+        return 'XII'
+    if number == 13:
+        return 'XIII'
+    if number == 14:
+        return 'XIV'
+    if number == 15:
+        return 'XV'
+    if number == 16:
+        return 'XVI'
+    if number == 17:
+        return 'XVII'
+    if number == 18:
+        return 'XVIII'
+    if number == 19:
+        return 'XIX'
+    if number == 20:
+        return 'XX'
     
 
 def fromroman(roman):
@@ -42,6 +62,23 @@ def fromroman(roman):
         return 9
     if roman == 'X':
         return 10
-    
-
-
+    if roman == 'XI':
+        return 11
+    if roman == 'XII':
+        return 12
+    if roman == 'XIII':
+        return 13
+    if roman == 'XIV':
+        return 14
+    if roman == 'XV':
+        return 15
+    if roman == 'XVI':
+        return 16
+    if roman == 'XVII':
+        return 17
+    if roman == 'XVIII':
+        return 18
+    if roman == 'XIX':
+        return 19
+    if roman == 'XX':
+        return 20
