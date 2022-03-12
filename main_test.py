@@ -2,47 +2,56 @@ import pytest
 
 from main import toroman, fromroman
 
-def test_toroman():
-    assert toroman(1) == 'I'
-    assert toroman(2) == 'II'
-    assert toroman(3) == 'III'
-    assert toroman(4) == 'IV'
-    assert toroman(5) == 'V'
-    assert toroman(6) == 'VI'
-    assert toroman(7) == 'VII'
-    assert toroman(8) == 'VIII'
-    assert toroman(9) == 'IX'
-    assert toroman(10) == 'X'
-    assert toroman(11) == 'XI'
-    assert toroman(12) == 'XII'
-    assert toroman(13) == 'XIII'
-    assert toroman(14) == 'XIV'
-    assert toroman(15) == 'XV'
-    assert toroman(16) == 'XVI'
-    assert toroman(17) == 'XVII'
-    assert toroman(18) == 'XVIII'
-    assert toroman(19) == 'XIX'
-    assert toroman(20) == 'XX'
+toroman_table = [
+    (1, 'I'),
+    (2,'II'),
+    (3, 'III'),
+    (4, 'IV'),
+    (5, 'V'),
+    (6, 'VI'),
+    (7, "VII"),
+    (8, "VIII"),
+    (9, "IX"),
+    (10, "X"),
+    (11, "XI"),
+    (12, "XII"),
+    (13, "XIII"),
+    (14, "XIV"),
+    (15, "XV"),
+    (16, "XVI"),
+    (17, "XVII"),
+    (18, "XVIII"),
+    (19, "XIX"),
+    (20, 'XX')
+]
 
+fromroman_table = [
+    ('I', 1),
+    ('II', 2),
+    ('III', 3),
+    ('IV', 4),
+    ('V', 5),
+    ('VI', 6),
+    ("VII", 7),
+    ("VIII", 8),
+    ("IX", 9),
+    ("X", 10),
+    ("XI", 11),
+    ("XII", 12),
+    ("XIII", 13),
+    ("XIV", 14),
+    ("XV", 15),
+    ("XVI", 16),
+    ("XVII", 17),
+    ("XVIII", 18),
+    ("XIX", 19),
+    ('XX', 20)
+]
 
-def test_fromroman():
-    assert fromroman('I') == 1
-    assert fromroman('II') == 2
-    assert fromroman('III') == 3
-    assert fromroman('IV') == 4
-    assert fromroman('V') == 5
-    assert fromroman('VI') == 6
-    assert fromroman('VII') == 7
-    assert fromroman('VIII') == 8
-    assert fromroman('IX') == 9
-    assert fromroman('X') == 10
-    assert fromroman('XI') == 11
-    assert fromroman('XII') == 12
-    assert fromroman('XIII') == 13
-    assert fromroman('XIV') == 14
-    assert fromroman('XV') == 15
-    assert fromroman('XVI') == 16
-    assert fromroman('XVII') == 17
-    assert fromroman('XVIII') == 18
-    assert fromroman('XIX') == 19
-    assert fromroman('XX') == 20
+@pytest.mark.parametrize('number, roman', toroman_table)
+def test_toroman(number, roman):
+    assert toroman(number) == roman
+
+@pytest.mark.parametrize('roman, number', fromroman_table)
+def test_fromroman(roman, number):
+    assert fromroman(roman) == number
