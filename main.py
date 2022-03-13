@@ -24,9 +24,9 @@ def fromroman(roman):
             if roman[i:i+1] == "I":
                 number += 1
                 i+=1
-            if roman[i:i+1] == "I":
-                number += 1
-                i+=1
+                if roman[i:i+1] == "I":
+                    number += 1
+                    i+=1
         elif roman[i:i+1] == "V":
             number += 5
             i+=1
